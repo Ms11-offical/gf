@@ -1,0 +1,2679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Mofinow Staff Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.left-0{left:0px}.right-0{right:0px}.bottom-0{bottom:0px}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-0{margin-bottom:0px}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.ml-3{margin-left:0.75rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mb-4{margin-bottom:1rem}.ml-2{margin-left:0.5rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-12{height:3rem}.h-32{height:8rem}.h-36{height:9rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-full{height:100%}.h-24{height:6rem}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-32{width:8rem}.w-36{width:9rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-full{width:100%}.w-24{width:6rem}.max-w-md{max-width:28rem}.max-w-xs{max-width:20rem}.flex-1{flex:1 1 0%}.flex-grow{flex-grow:1}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.cursor-not-allowed{cursor:not-allowed}.select-none{-webkit-user-select:none;user-select:none}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded{border-radius:0.25rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.rounded-t-3xl{border-top-left-radius:1.5rem;border-top-right-radius:1.5rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-\[\#e6ecff\]{--tw-border-opacity:1;border-color:rgb(230 236 255 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-red-400{--tw-border-opacity:1;border-color:rgb(248 113 113 / var(--tw-border-opacity, 1))}.bg-\[\#E8F0FE\]{--tw-bg-opacity:1;background-color:rgb(232 240 254 / var(--tw-bg-opacity, 1))}.bg-\[\#f9fbff\]{--tw-bg-opacity:1;background-color:rgb(249 251 255 / var(--tw-bg-opacity, 1))}.bg-blue-200{--tw-bg-opacity:1;background-color:rgb(191 219 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-pink-300{--tw-bg-opacity:1;background-color:rgb(249 168 212 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-opacity-30{--tw-bg-opacity:0.3}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-\[\#5B3FFF\]{--tw-gradient-from:#5B3FFF var(--tw-gradient-from-position);--tw-gradient-to:rgb(91 63 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-\[\#3AB0FF\]{--tw-gradient-to:#3AB0FF var(--tw-gradient-to-position)}.fill-current{fill:currentColor}.stroke-current{stroke:currentColor}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.pb-16{padding-bottom:4rem}.pb-24{padding-bottom:6rem}.pb-28{padding-bottom:7rem}.pb-4{padding-bottom:1rem}.pt-10{padding-top:2.5rem}.pt-12{padding-top:3rem}.pt-16{padding-top:4rem}.pt-20{padding-top:5rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-5xl{font-size:3rem;line-height:1}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.leading-5{line-height:1.25rem}.leading-7{line-height:1.75rem}.text-\[\#3a4468\]{--tw-text-opacity:1;color:rgb(58 68 104 / var(--tw-text-opacity, 1))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-blue-100{--tw-text-opacity:1;color:rgb(219 234 254 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-pink-600{--tw-text-opacity:1;color:rgb(219 39 119 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_4px_6px_rgba\(0\2c 0\2c 0\2c 0\.1\)\2c 0_0_10px_rgba\(0\2c 0\2c 0\2c 0\.05\)\2c 0_-4px_6px_rgba\(0\2c 0\2c 0\2c 0\.1\)\2c 0_0_8px_rgba\(0\2c 0\2c 0\2c 0\.04\)\]{--tw-shadow:0 4px 6px rgba(0,0,0,0.1),0 0 10px rgba(0,0,0,0.05),0 -4px 6px rgba(0,0,0,0.1),0 0 8px rgba(0,0,0,0.04);--tw-shadow-colored:0 4px 6px var(--tw-shadow-color), 0 0 10px var(--tw-shadow-color), 0 -4px 6px var(--tw-shadow-color), 0 0 8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_-4px_6px_-1px_rgba\(0\2c 0\2c 0\2c 0\.1\)\2c 0_-2px_4px_-1px_rgba\(0\2c 0\2c 0\2c 0\.06\)\]{--tw-shadow:0 -4px 6px -1px rgba(0,0,0,0.1),0 -2px 4px -1px rgba(0,0,0,0.06);--tw-shadow-colored:0 -4px 6px -1px var(--tw-shadow-color), 0 -2px 4px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:bg-\[\#f0f5ff\]:hover{--tw-bg-opacity:1;background-color:rgb(240 245 255 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28 / var(--tw-bg-opacity, 1))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-\[\#5B3FFF\]:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(91 63 255 / var(--tw-ring-opacity, 1))}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}</style><style>
+    /* Login Screen Styles */
+    .flex-col {
+        flex-direction: column;
+    }
+    .min-h-screen {
+        min-height: 100vh;
+    }
+    .flex {
+        display: flex;
+    }
+    .to-\[\#3AB0FF\] {
+        --tw-gradient-to: #3AB0FF var(--tw-gradient-to-position);
+    }
+    .from-\[\#5B3FFF\] {
+        --tw-gradient-from: #5B3FFF var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(91 63 255 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+    .bg-gradient-to-br {
+        background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+    }
+    .flex-grow {
+        flex-grow: 1;
+    }
+    .relative {
+        position: relative;
+    }
+    *, ::after, ::before {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+    }
+    .pt-16 {
+        padding-top: 4rem;
+    }
+    .max-w-xs {
+        max-width: 20rem;
+    }
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+    audio, canvas, embed, iframe, img, object, svg, video {
+        display: block;
+        vertical-align: middle;
+    }
+    .overflow-hidden {
+        overflow: hidden;
+    }
+    .right-0 {
+        right: 0px;
+    }
+    .left-0 {
+        left: 0px;
+    }
+    .bottom-0 {
+        bottom: 0px;
+    }
+    .absolute {
+        position: absolute;
+    }
+    .w-full {
+        width: 100%;
+    }
+    .h-full {
+        height: 100%;
+    }
+    .pt-12 {
+        padding-top: 3rem;
+    }
+    .pb-16 {
+        padding-bottom: 4rem;
+    }
+    .px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+    }
+    .items-center {
+        align-items: center;
+    }
+    .max-w-md {
+        max-width: 28rem;
+    }
+    .text-black {
+        --tw-text-opacity: 1;
+        color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+    }
+    .text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .mb-8 {
+        margin-bottom: 2rem;
+    }
+    blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+        margin: 0;
+    }
+    .shadow-md {
+        --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+    .text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    }
+    .font-semibold {
+        font-weight: 600;
+    }
+    .py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+    .rounded-full {
+        border-radius: 9999px;
+    }
+    .mb-4 {
+        margin-bottom: 1rem;
+    }
+    [role=button], button {
+        cursor: pointer;
+    }
+    button, input:where([type=button]), input:where([type=reset]), input:where([type=submit]) {
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none;
+    }
+    button, select {
+        text-transform: none;
+    }
+    button, input, optgroup, select, textarea {
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+    }
+    .text-\[\#5B3FFF\] {
+        --tw-text-opacity: 1;
+        color: rgb(91 63 255 / var(--tw-text-opacity, 1));
+    }
+    .bg-gradient-to-r {
+        background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    }
+    .border-\[\#5B3FFF\] {
+        --tw-border-opacity: 1;
+        border-color: rgb(91 63 255 / var(--tw-border-opacity, 1));
+    }
+    .border {
+        border-width: 1px;
+    }
+    .justify-center {
+        justify-content: center;
+    }
+    .mb-2 {
+        margin-bottom: 0.5rem;
+    }
+    .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    .fa, .fab, .fad, .fal, .far, .fas {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+    }
+    .fa-twitter:before {
+        content: "\f099";
+    }
+    ::after, ::before {
+        --tw-content: '';
+    }
+    .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+        margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+    .fab, .far {
+        font-weight: 400;
+    }
+    .fab {
+        font-family: "Font Awesome 5 Brands";
+    }
+    .fa-linkedin-in:before {
+        content: "\f0e1";
+    }
+    .fa-facebook-f:before {
+        content: "\f39e";
+    }
+    .fa-google:before {
+        content: "\f1a0";
+    }
+    .text-gray-400 {
+        --tw-text-opacity: 1;
+        color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+    }
+    .text-xs {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+    .hidden {
+        display: none;
+    }
+    .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+    .mb-6 {
+        margin-bottom: 1.5rem;
+    }
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .border-gray-300 {
+        --tw-border-opacity: 1;
+        border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+    }
+    .rounded-lg {
+        border-radius: 0.5rem;
+    }
+    .focus\:outline-none:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+    }
+    .focus\:ring-2:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    }
+    .focus\:ring-\[\#5B3FFF\]:focus {
+        --tw-ring-color: #5B3FFF;
+    }
+    input::placeholder, textarea::placeholder {
+        opacity: 1;
+        color: #9ca3af;
+    }
+    .text-green-600 {
+        --tw-text-opacity: 1;
+        color: rgb(22 163 74 / var(--tw-text-opacity, 1));
+    }
+    .mt-6 {
+        margin-top: 1.5rem;
+    }
+    
+    /* App Styles */
+    input[readonly] {
+        background-color: #f9fafb;
+        cursor: not-allowed;
+    }
+    .staff-profile-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #e0f2f7;
+        color: #00796b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 0.9rem;
+        overflow: hidden;
+        flex-shrink: 0;
+        margin-right: 12px;
+    }
+    .staff-profile-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    :root {
+        --primary-bg-color: #E8F0FE;
+        --secondary-bg-color: #ffffff;
+        --text-color: #000000;
+        --gray-text-color: #4b5563;
+        --font-size-base: 1rem;
+    }
+    
+    .theme-light {
+        --primary-bg-color: #E8F0FE;
+        --secondary-bg-color: #ffffff;
+        --text-color: #000000;
+        --gray-text-color: #4b5563;
+    }
+    
+    .theme-dark {
+        --primary-bg-color: #1a202c;
+        --secondary-bg-color: #2d3748;
+        --text-color: #cbd5e0;
+        --gray-text-color: #a0aec0;
+    }
+    
+    body {
+        background-color: var(--primary-bg-color);
+        color: var(--text-color);
+    }
+    #headerSection {
+        background-color: var(--primary-bg-color);
+    }
+    #staffManagementSection, #settingsSection, #staffDetailSection {
+        background-color: var(--secondary-bg-color);
+    }
+    .text-black {
+        color: var(--text-color);
+    }
+    .text-gray-700 {
+        color: var(--gray-text-color);
+    }
+    .text-gray-500 {
+        color: var(--gray-text-color);
+    }
+    input, .bg-white {
+        background-color: var(--secondary-bg-color);
+        color: var(--text-color);
+    }
+    .border-gray-300 {
+        border-color: var(--gray-text-color);
+    }
+    .hover\:bg-gray-300:hover {
+        background-color: var(--gray-text-color);
+    }
+    .bg-gray-50 {
+        background-color: var(--secondary-bg-color);
+    }
+    .border-gray-200 {
+        border-color: var(--gray-text-color);
+    }
+    
+    .font-size-larger {
+        font-size: 1.15rem;
+    }
+    .font-size-medium {
+        font-size: 1rem;
+    }
+    .font-size-small {
+        font-size: 0.85rem;
+    }
+    
+    /* Login screen specific */
+    #loginScreen {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* App container */
+    #appContent {
+        display: none;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    
+    /* Logo styling */
+    .login-logo {
+        max-width: 120px;
+        margin: 0 auto;
+        padding-top: 4rem;
+    }
+    
+    /* Form styling */
+    .form-input {
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        width: 100%;
+        background-color: var(--secondary-bg-color);
+        color: var(--text-color);
+    }
+    
+    /* Gradient buttons */
+    .gradient-btn {
+        background-image: linear-gradient(to right, #5B3FFF, #3AB0FF);
+        color: white;
+        border: none;
+        border-radius: 9999px;
+        padding: 0.75rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .outline-btn {
+        background-color: white;
+        color: #5B3FFF;
+        border: 1px solid #5B3FFF;
+        border-radius: 9999px;
+        padding: 0.75rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    /* Social icons */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .social-icons a {
+        color: #5B3FFF;
+        font-size: 1.25rem;
+    }
+    
+    /* Wave background */
+    .wave-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        height: 80px;
+    }
+    
+    /* Combined app styling */
+    .app-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    /* Transition effects */
+    .fade-in {
+        animation: fadeIn 0.5s ease-in;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    body {
+      font-family: "Inter", sans-serif;
+    }
+h3#membersTitle {
+    margin-top: 2rem;
+    margin-left: 1.2rem;
+}
+        .ms-1{ 
+    margin-top: 15rem;}
+    .ms-2{
+      width: 14rem;
+    }
+    .ms-3{
+      padding-top:1.2rem;
+       margin-inline-start: 0rem;
+    }
+
+   header.header-gradient.px-6.py-6 {
+    background: linear-gradient(135deg, #0d47a1, #1e88e5);
+}
+div#staffProfileContent {
+    margin-top: 12rem;
+}
+.shadow-smm {
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+button#cell {
+    font-size: 32px;
+}
+#customAlert.show {
+  transform: translateX(-50%) translateY(60px);
+  opacity: 1;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    font-weight: bold;
+}
+#customAlert.hide {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+}
+
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+  
+  <!-- Invoice Container (Initially Hidden) -->
+  <div id="invoiceContainer" class="hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header-gradient px-6 py-6">
+      <div class="flex items-center justify-between">
+        <button  id="invoiceBackButton"  aria-label="Back" class="text-white text-xl font-bold flex items-center space-x-2">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="flex items-center space-x-4">
+          <button aria-label="Download" id="cell" class="text-white text-xl">
+           +
+          </button>
+          <script>
+
+          </script>
+          <button aria-label="Download" class="text-white text-xl">
+            <i class="fas fa-download"></i>
+          </button>
+          <button aria-label="Send" class="text-white text-xl font-bold flex items-center space-x-2" onclick="shareReceiptImage()">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mt-4 text-center">
+        <h1 class="text-2xl font-extrabold text-white">INVOICE</h1>
+        <p class="text-blue-100 mt-1">Date: <span id="currentDate">01/06/2025</span></p>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="receipt" class="bg-white flex-grow p-6">
+      <div class="mb-6">
+        <div class="flex justify-between mb-2">
+          <div>
+            <h2 class="font-bold text-gray-700">Bill By:</h2>
+
+
+    <div id="displayName" contenteditable="true" class="text-black font-semibold text-lg flex items-center cursor-pointer animated-border p-1">
+          Madan singh </div>
+
+          </div>
+          <div class="text-right">
+            <h2 class="font-bold text-gray-700">Bill To:</h2>
+            <h2 id="staffDetailHeaderName" contenteditable="true" class="text-black font-semibold text-xl flex-1 text-center animated-border p-1">Clint name</h2>
+           
+          </div>
+        </div>
+      </div>
+      
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-blue-50">
+            <th class="text-left p-3 text-gray-600 font-semibold">Description</th>
+            <th class="p-3 text-gray-600 font-semibold">QTY.</th>
+            <th class="p-3 text-gray-600 font-semibold">Rate (₹)</th>
+            <th class="text-right p-3 text-gray-600 font-semibold">Amount (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="p-3" contenteditable="true" style="outline:none;">लेबर</td>
+            <td class="p-3 text-center" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)">1</td>
+            <td class="p-3 text-center text-gray-600" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)">700</td>
+            <td class="p-3 text-right amount-cell" contenteditable="false" style="outline:none;">700</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3" contenteditable="true" style="outline:none;">मिस्त्री</td>
+            <td class="p-3 text-center" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)">1</td>
+            <td class="p-3 text-center text-gray-600" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)">400</td>
+            <td class="p-3 text-right amount-cell" contenteditable="false" style="outline:none;">400</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3" contenteditable="true" style="outline:none;">-</td>
+            <td class="p-3 text-center" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)">-</td>
+            <td class="p-3 text-center text-gray-600" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)">-</td>
+            <td class="p-3 text-right amount-cell" contenteditable="false" style="outline:none;">-</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-3" contenteditable="true" style="outline:none;">-</td>
+            <td class="p-3 text-center" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)">-</td>
+            <td class="p-3 text-center text-gray-600" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)">-</td>
+            <td class="p-3 text-right amount-cell" contenteditable="false" style="outline:none;">-</td>
+          </tr>
+          <tr>
+            <td class="p-3" contenteditable="true" style="outline:none;"></td>
+            <td class="p-3 text-center" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)"></td>
+            <td class="p-3 text-center text-gray-600" contenteditable="true" style="outline:none;" oninput="calculateAmount(this)"></td>
+            <td class="p-3 text-right amount-cell" contenteditable="false" style="outline:none;"></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="flex justify-end mt-6">
+        <div class="w-64">
+          <div class="flex justify-between py-2 border-b">
+            <span class="font-bold">Subtotal:</span>
+            <span>₹<span id="subtotalAmount">18500</span></span>
+          </div>
+          <div class="flex justify-between py-2 border-b">
+            <span>Tax (0):</span>
+            <span>₹<span id="taxAmount">000</span></span>
+          </div>
+          <div class="flex justify-between py-2 font-bold text-lg">
+            <span>Total:</span>
+            <span>₹<span id="totalAmount">20350</span></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+        <h3 class="font-bold text-gray-700 mb-2">Notes:</h3>
+        <p contenteditable="true" class="animated-border p-2">Payment due within 5 days.Design by MS11 and made by India</p>
+      </div>
+    </main>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- Login Screen -->
+  <div id="loginScreen" class="min-h-screen flex flex-col">
+    <div class="flex-grow bg-gradient-to-br from-[#5B3FFF] to-[#3AB0FF] relative">
+      <div class="max-w-xs mx-auto pt-16">
+        <img
+          alt="White stylized V shaped logo with MOFINOW text below on blue to purple gradient background"
+          class="mx-auto login-logo"
+          height="120"
+          src="https://storage.googleapis.com/a1aa/image/4c0c5922-ca3e-4239-a11f-b397e2756223.jpg"
+          width="120"
+        />
+      </div>
+      <div class="wave-bg">
+        <svg
+          class="w-full h-full"
+          fill="none"
+          preserveAspectRatio="none"
+          viewBox="0 0 375 80"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 40C50 80 100 0 187.5 40C275 80 325 0 375 40V80H0V40Z"
+            fill="#FFFFFF"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="bg-white flex flex-col items-center px-8 pt-12 pb-16 w-full max-w-md mx-auto">
+      <div id="welcome-screen" class="w-full">
+        <p class="text-black text-base mb-8 text-center">Welcome !</p>
+        <button
+          id="create-account-btn"
+          class="gradient-btn"
+        >
+          Create Account
+        </button>
+        <button
+          id="login-btn"
+          class="outline-btn"
+        >
+          Login
+        </button>
+        <div class="social-icons">
+          <a aria-label="Twitter login" href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a aria-label="LinkedIn login" href="#">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a aria-label="Facebook login" href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a aria-label="Google login" href="#">
+            <i class="fab fa-google"></i>
+          </a>
+        </div>
+        <p class="text-xs text-gray-400 text-center">Sign in with another account</p>
+      </div>
+
+      <form
+        id="create-account-form"
+        class="hidden w-full flex flex-col"
+        novalidate
+        autocomplete="off"
+      >
+        <p class="text-black text-base mb-6 text-center font-semibold text-lg">Create Account</p>
+        <input
+          type="text"
+          name="fullname"
+          placeholder="Full Name"
+          required
+          class="form-input focus:outline-none focus:ring-2 focus:ring-[#5B3FFF]"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+          class="form-input focus:outline-none focus:ring-2 focus:ring-[#5B3FFF]"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          class="form-input mb-6 focus:outline-none focus:ring-2 focus:ring-[#5B3FFF]"
+        />
+        <button
+          type="submit"
+          class="gradient-btn"
+        >
+          Create Account
+        </button>
+        <button
+          type="button"
+          id="back-to-welcome-from-create"
+          class="outline-btn mb-0"
+        >
+          Back
+        </button>
+      </form>
+
+      <form
+        id="login-form"
+        class="hidden w-full flex flex-col"
+        novalidate
+        autocomplete="off"
+      >
+        <p class="text-black text-base mb-6 text-center font-semibold text-lg">Login</p>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+          class="form-input focus:outline-none focus:ring-2 focus:ring-[#5B3FFF]"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          class="form-input mb-6 focus:outline-none focus:ring-2 focus:ring-[#5B3FFF]"
+        />
+        <button
+          type="submit"
+          class="gradient-btn"
+        >
+          Login
+        </button>
+        <button
+          type="button"
+          id="back-to-welcome-from-login"
+          class="outline-btn mb-0"
+        >
+          Back
+        </button>
+      </form>
+
+      <div
+        id="account-opened"
+        class="hidden w-full text-center text-green-600 font-semibold text-lg mt-6"
+      >
+        Account successfully logged in!
+      </div>
+    </div>
+  </div>
+
+  <!-- App Content -->
+  <div id="appContent" class="app-container">
+    <header
+      class="flex items-center justify-between px-4 py-6 bg-[#E8F0FE]"
+      id="headerSection"
+    >
+      <div
+        id="profilePicCircle"
+        class="w-12 h-12 rounded-full bg-pink-300 flex items-center justify-center cursor-pointer select-none text-pink-600 font-semibold text-base overflow-hidden"
+        title="Click to edit profile picture"
+        aria-label="Profile picture"
+        role="img"
+      >
+        MA
+      </div>
+      <div class="flex flex-col justify-center ml-3 flex-1">
+        <div
+          id="displayName"
+          class="text-black font-semibold text-lg flex items-center cursor-pointer"
+          title="Click to edit name"
+        >
+          Madan singh
+          <svg
+            class="ml-1 w-5 h-5 text-black"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </div>
+        <div class="text-gray-700 text-base" id="displayPhone">+91 9876543210</div>
+      </div>
+      <button
+        aria-label="Add user"
+        class="flex items-center space-x-3 bg-white rounded-lg px-5 py-2.5 font-extrabold text-black text-lg shadow-[0_4px_6px_rgba(0,0,0,0.1),0_0_10px_rgba(0,0,0,0.05),0_-4px_6px_rgba(0,0,0,0.1),0_0_8px_rgba(0,0,0,0.04)]"
+        id="addUserBtn"
+        type="button"
+      >
+        <i class="fas fa-plus text-xl"></i>
+        <span>Add</span>
+      </button>
+    </header>
+
+    <header
+      class="w-full max-w-md flex items-center justify-between px-4 py-6 bg-[#E8F0FE] hidden"
+      id="staffDetailHeader"
+    >
+      <button id="backToStaffListBtnHeader" class="text-black">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+      </button>
+      <h2 id="staffDetailHeaderName" class="text-black font-semibold text-xl flex-1 text-center">Clint name</h2>
+      <button id="addNewEntryBtnHeader" class="flex items-center space-x-2 bg-white rounded-lg px-4 py-2 font-semibold text-black text-base shadow">
+        <i class="fas fa-plus text-lg"></i>
+        <span>new</span>
+      </button>
+    </header>
+
+    <main
+      class="flex-grow bg-white rounded-t-3xl  pb-28 flex flex-col items-center justify-start space-y-6 px-4"
+      id="staffManagementSection"
+    >
+      <img
+        alt="Illustration of three floating papers in teal and light teal colors with sparkles around them"
+        class="ms-2 h-36  ms-1"
+        height="150"
+        id="noStaffImage"
+        loading="lazy"
+        src="non.PNG"
+        width="150"
+      />
+      <p class="text-gray-500 text-base" id="noStaffText">No Member Added</p>
+      <h3
+        class="w-full max-w-md text-left text-xl font-bold text-black mt-1 hidden"
+        id="membersTitle"
+      >
+        Members
+      </h3>
+      <ul
+        class="w-full max-w-md space-y-3 text-left text-black font-semibold"
+        id="staffList"
+      ></ul>
+    </main>
+
+    <main
+      class="flex-grow bg-white rounded-t-3xl pb-28 flex flex-col items-center justify-start space-y-6 px-4 hidden"
+      id="staffDetailSection"
+    >
+      <div id="staffProfileContent" class="w-full max-w-md flex flex-col items-center space-y-6 pt-10">
+        <div
+          id="detailStaffProfilePic"
+          class="w-32 h-32 rounded-full bg-blue-200 flex items-center justify-center text-blue-700 font-semibold text-5xl overflow-hidden"
+        >
+        </div>
+        <h2 id="detailStaffName" class="text-2xl font-bold text-black"></h2>
+        <p id="detailStaffPhone" class="text-gray-700 text-lg"></p>
+        <button
+          id="editStaffFromDetailBtn"
+          class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 shadow-md"
+        >
+          Edit Staff
+        </button>
+  
+      </div>
+
+      <div id="dailyLogContent" class="w-full max-w-md space-y-3 pt-4 hidden">
+        </div>
+    </main>
+    
+    <main class="bg-white rounded-t-3xl px-6 pt-6 pb-24 flex-grow hidden" id="settingsSection">
+      <header class="flex items-center gap-2 px-5 pt-6 pb-4">
+        <img alt="Settings gear icon in grey color" class="w-6 h-6" decoding="async" height="24" loading="lazy" src="https://placehold.co/24x24/png?text=%E2%9881%BC" width="24"/>
+        <h1 class="font-extrabold text-2xl text-black">
+         Settings
+        </h1>
+       </header>
+      <section class="mb-6 relative">
+        <h2 class="font-extrabold text-lg text-[#3a4468] mb-3">
+          Appearance
+        </h2>
+        <button aria-expanded="false" aria-controls="theme-options" class="w-full flex items-center justify-between border border-[#e6ecff] rounded-lg p-4 text-left bg-[#f9fbff] hover:bg-[#f0f5ff] focus:outline-none" id="theme-button" type="button">
+         <div class="flex items-center gap-3">
+          <img alt="Palette icon representing app theme" class="w-6 h-6" decoding="async" height="24" loading="lazy" src="https://placehold.co/24x24/png?text=%F0%9F%8E%A8" width="24"/>
+          <div>
+           <p class="font-semibold text-[#3a4468] text-base leading-5">
+            App theme
+           </p>
+           <p class="text-[#3a4468] text-sm leading-5" id="selectedThemeText">
+            Select which app theme to display
+           </p>
+          </div>
+         </div>
+         <i class="fas fa-chevron-down text-[#3a4468]" id="theme-chevron">
+         </i>
+        </button>
+        <div aria-labelledby="theme-button" class="absolute left-0 right-0 mt-2 bg-white border border-[#e6ecff] rounded-lg shadow-lg z-10 hidden" id="theme-options" role="menu">
+         <button class="w-full text-left px-4 py-3 hover:bg-[#f0f5ff] text-[#3a4468] font-semibold" role="menuitem" type="button" data-theme="light">
+          Light
+         </button>
+         <button class="w-full text-left px-4 py-3 hover:bg-[#f0f5ff] text-[#3a4468] font-semibold" role="menuitem" type="button" data-theme="dark">
+          Dark
+         </button>
+         <button class="w-full text-left px-4 py-3 hover:bg-[#f0f5ff] text-[#3a4468] font-semibold" role="menuitem" type="button" data-theme="system">
+          System
+         </button>
+        </div>
+       </section>
+       <section class="mb-6 relative">
+        <h2 class="font-extrabold text-lg text-[#3a4468] mb-3">
+         Language
+        </h2>
+        <button aria-expanded="false" aria-controls="language-options" class="w-full flex items-center justify-between border border-[#e6ecff] rounded-lg p-4 text-left bg-[#f9fbff] hover:bg-[#f0f5ff] focus:outline-none" id="language-button" type="button">
+         <div class="flex items-center gap-3">
+          <img alt="Language icon with letter A and Chinese character" class="w-6 h-6" decoding="async" height="24" loading="lazy" src="https://placehold.co/24x24/png?text=A%E5%AD%97" width="24"/>
+          <div>
+           <p class="font-semibold text-[#3a4468] text-base leading-5">
+            Language
+           </p>
+           <p class="text-[#3a4468] text-sm leading-5" id="selectedLanguageText">
+            Select which language use
+           </p>
+          </div>
+         </div>
+         <i class="fas fa-chevron-down text-[#3a4468]" id="language-chevron">
+         </i>
+        </button>
+        <div id="language-options" aria-labelledby="language-button" class="absolute left-0 right-0 mt-2 bg-white border border-[#e6ecff] rounded-lg shadow-lg z-10 hidden" role="menu">
+         <button class="w-full text-left px-4 py-3 hover:bg-[#f0f5ff] text-[#3a4468] font-semibold" role="menuitem" type="button" data-language="english">
+          English
+         </button>
+         <button class="w-full text-left px-4 py-3 hover:bg-[#f0f5ff] text-[#3a4468] font-semibold" role="menuitem" type="button" data-language="hindi">
+          Hindi
+         </button>
+        </div>
+       </section>
+       <section class="mb-6 relative">
+        <h2 class="font-extrabold text-lg text-[#3a4468] mb-3">
+         Font size
+        </h2>
+        <button aria-expanded="false" aria-controls="fontsize-options" class="w-full flex items-center justify-between border border-[#e6ecff] rounded-lg p-4 text-left bg-[#f9fbff] hover:bg-[#f0f5ff] focus:outline-none" id="fontsize-button" type="button">
+         <div class="flex items-center gap-3">
+          <img alt="Font size icon with letter M and plus sign" class="w-6 h-6" decoding="async" height="24" loading="lazy" src="https://placehold.co/24x24/png?text=M%2B" width="24"/>
+          <p class="font-semibold text-[#3a4468] text-base leading-5">
+           Font-size
+          </p>
+         </div>
+         <i class="fas fa-chevron-down text-[#3a4468]" id="fontsize-chevron">
+         </i>
+        </button>
+        <div aria-labelledby="fontsize-button" class="absolute left-0 right-0 mt-2 bg-white border border-[#e6ecff] rounded-lg shadow-lg z-10 hidden" id="fontsize-options" role="menu">
+         <button class="w-full text-left px-4 py-3 hover:bg-[#f0f5ff] text-[#3a4468] font-semibold" role="menuitem" type="button" data-fontsize="larger">
+          Larger
+         </button>
+         <button class="w-full text-left px-4 py-3 hover:bg-[#f0f5ff] text-[#3a4468] font-semibold" role="menuitem" type="button" data-fontsize="medium">
+          Medium
+         </button>
+         <button class="w-full text-left px-4 py-3 hover:bg-[#f0f5ff] text-[#3a4468] font-semibold" role="menuitem" type="button" data-fontsize="small">
+          Small
+         </button>
+         <button class="w-full text-left px-4 py-3 hover:bg-[#f0f5ff] text-[#3a4468] font-semibold" role="menuitem" type="button" data-fontsize="system">
+          System
+         </button>
+        </div>
+       </section>
+       <section>
+        <h2 class="font-extrabold text-lg text-[#3a4468] mb-2">
+         About
+        </h2>
+        <p class="text-[#3a4468] text-base leading-7 max-w-md">
+         This app is desgin and made by Ms11. BY using this app user manage their works and Money also make attendance of the employes For any improvement contact me using gmail :-
+        </p>
+<section class="mt-6">
+  <h2 class="font-extrabold text-lg text-[#3a4468] mb-2">Account</h2>
+  <button id="logoutBtn" class="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition">
+    <i class="fas fa-sign-out-alt mr-2"></i> Logout
+  </button>
+</section>
+
+
+
+
+       </section>
+    </main>
+
+    <nav
+      class="flex justify-around items-center bg-white border-t border-gray-200 py-3 fixed bottom-0 left-0 right-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_-2px_4px_-1px_rgba(0,0,0,0.06)]"
+    >
+      <button class="flex flex-col items-center text-blue-600 font-semibold space-y-1" id="homeNavBtn">
+        <svg
+          class="w-6 h-6 fill-current"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M12 2L4 7v13h16V7l-8-5z"></path>
+          <path
+            d="M12 22v-8"
+            stroke="#2563EB"
+            stroke-linecap="round"
+            stroke-width="2"
+          ></path>
+        </svg>
+        <span class="text-sm">Home</span>
+      </button>
+      <button class="flex flex-col items-center text-gray-700 space-y-1">
+        <svg
+          class="w-6 h-6 stroke-current"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="12" cy="7" r="4"></circle>
+          <path d="M5.5 21h13a2 2 0 0 0-13 0z"></path>
+        </svg>
+        <span class="text-sm">Attendance</span>
+      </button>
+      <button class="flex flex-col items-center text-gray-700 space-y-1">
+        <svg
+          class="w-6 h-6 fill-current"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="12" cy="10" fill="currentColor" r="3"></circle>
+          <path
+            d="M12 2C8 2 5 6 5 10c0 5 7 12 7 12s7-7 7-12c0-4-3-8-7-8z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <span class="text-sm">Geo</span>
+      </button>
+      <button class="flex flex-col items-center text-gray-700 space-y-1" id="settingsNavBtn">
+        <svg
+          class="w-6 h-6 fill-current"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19.14 12.94a7.5 7.5 0 0 0 0-1.88l2.03-1.58a.5.5 0 0 0 .12-.63l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.52 7.52 0 0 0-1.62-.94l-.36-2.54a.5.5 0 0 0-.5-.43h-3.84a.5.5 0 0 0-.5.43l-.36 2.54a7.52 7.52 0 0 0-1.62.94l-2.39-.96a.5.5 0 0 0-.6.22l-1.92 3.32a.5.5 0 0 0 .12.63l2.03 1.58a7.5 7.5 0 0 0 0 1.88l-2.03 1.58a.5.5 0 0 0-.12.63l1.92 3.32a.5.5 0 0 0 .6.22l2.39-.96a7.52 7.52 0 0 0 1.62.94l.36 2.54a.5.5 0 0 0 .5.43h3.84a.5.5 0 0 0 .5-.43l.36-2.54a7.52 7.52 0 0 0 1.62-.94l2.39.96a.5.5 0 0 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.63l-2.03-1.58zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <span class="text-sm">Settings</span>
+      </button>
+    </nav>
+
+    <div
+      id="profileEditModal"
+      role="dialog"
+      aria-modal="true"
+      tabindex="-1"
+      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 hidden p-4"
+    >
+      <div
+        class="bg-white rounded-xl shadow-lg max-w-md w-full p-6 relative"
+        role="document"
+      >
+        <h2 class="text-xl font-semibold mb-4 text-center">Edit Profile</h2>
+        <form id="profileEditForm" class="space-y-6">
+          <div class="flex flex-col items-center space-y-4">
+            <label
+              for="profilePicInput"
+              id="profilePicPreview"
+              class="w-24 h-24 rounded-full bg-pink-300 flex items-center justify-center text-pink-600 font-semibold text-3xl cursor-pointer overflow-hidden relative"
+              title="Click to change profile picture"
+            >
+              MA
+            </label>
+            <input
+              type="file"
+              accept="image/*"
+              id="profilePicInput"
+              class="hidden"
+              aria-label="Upload profile picture"
+            />
+          </div>
+          <div>
+            <label
+              for="editName"
+              class="block text-gray-700 font-semibold mb-1"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="editName"
+              name="editName"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="editPhone"
+              class="block text-gray-700 font-semibold mb-1"
+              >Phone (non-editable)</label
+            >
+            <input
+              type="tel"
+              id="editPhone"
+              name="editPhone"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 bg-gray-100 cursor-not-allowed"
+              readonly
+            />
+          </div>
+          <div>
+            <label class="block text-gray-700 font-semibold mb-1">Password</label>
+            <div class="flex items-center space-x-2">
+              <input
+                type="password"
+                id="editPassword"
+                name="editPassword"
+                class="w-full border border-gray-300 rounded-md px-3 py-2"
+                value="********"
+                readonly
+              />
+              <button
+                type="button"
+                id="editPasswordBtn"
+                class="text-gray-600 hover:text-gray-900"
+                aria-label="Edit password"
+                title="Edit password"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.232 5.232l3.536 3.536M9 11l6 6L7 21l-4-4 6-6z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="flex justify-end space-x-3 pt-4">
+            <button
+              type="button"
+              id="profileCancelBtn"
+              class="px-4 py-2 rounded-md bg-gray-200 font-semibold hover:bg-gray-300"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              id="profileSaveBtn"
+              class="px-4 py-2 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      id="addUserModal"
+      role="dialog"
+      aria-modal="true"
+      tabindex="-1"
+      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 hidden p-4"
+    >
+      <div
+        class="bg-white rounded-xl shadow-lg max-w-md w-full p-6 relative"
+        role="document"
+      >
+        <h2 class="text-xl font-semibold mb-4 text-center" id="addUserModalTitle">Add User</h2>
+        <form id="addUserForm" class="space-y-4">
+          <div class="flex flex-col items-center space-y-4">
+            <label
+              for="staffProfilePicInput"
+              id="staffProfilePicPreview"
+              class="w-24 h-24 rounded-full bg-blue-200 flex items-center justify-center text-blue-700 font-semibold text-3xl overflow-hidden relative"
+              title="Click to change profile picture"
+            >
+              <span id="staffProfilePicInitials"></span>
+            </label>
+            <input
+              type="file"
+              accept="image/*"
+              id="staffProfilePicInput"
+              class="hidden"
+              aria-label="Upload staff profile picture"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-gray-700 font-semibold mb-1"
+              for="userName"
+              >Name <span class="text-red-600">*</span></label
+            >
+            <input
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="userName"
+              name="userName"
+              placeholder="Enter name"
+              required
+              type="text"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-gray-700 font-semibold mb-1"
+              for="userPhone"
+              >Phone (optional)</label
+            >
+            <input
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="userPhone"
+              name="userPhone"
+              placeholder="Enter phone number"
+              type="tel"
+            />
+          </div>
+          <div class="flex justify-end space-x-3 pt-4">
+            <button
+              class="px-4 py-2 rounded-md bg-gray-200 font-semibold hover:bg-gray-300"
+              id="cancelAddUserBtn"
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              class="px-4 py-2 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700"
+              type="submit"
+            >
+              OK
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="dateEditDeleteModal" role="dialog" aria-modal="true" tabindex="-1"
+         class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 hidden p-4">
+        <div class="bg-white rounded-xl shadow-lg max-w-md w-full p-6 relative" role="document">
+            <h2 class="text-xl font-semibold mb-4 text-center">Edit Daily Entry</h2>
+            <form id="dateEditForm" class="space-y-4">
+                <div>
+                    <label for="editDateInput" class="block text-gray-700 font-semibold mb-1">Date</label>
+                    <input type="date" id="editDateInput" name="editDateInput"
+                           class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div id="deleteWarning" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative hidden">
+                    <p>Are you sure you want to delete this entry? This action cannot be undone.</p>
+                    <label class="flex items-center mt-2">
+                        <input type="checkbox" id="confirmDeleteCheckbox" class="form-checkbox h-5 w-5 text-red-600">
+                        <span class="ml-2 text-sm">Yes, I understand and want to delete.</span>
+                    </label>
+                </div>
+                <div class="flex justify-between items-center pt-4">
+                    <button type="button" id="deleteDateEntryBtn"
+                            class="px-4 py-2 rounded-md bg-red-600 text-white font-semibold hover:bg-red-700">
+                        Delete
+                    </button>
+                    <div class="flex space-x-3">
+                        <button type="button" id="cancelDateEditBtn"
+                                class="px-4 py-2 rounded-md bg-gray-200 font-semibold hover:bg-gray-300">
+                            Cancel
+                        </button>
+                        <button type="submit" id="saveDateEditBtn"
+                                class="px-4 py-2 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  <script>function showCustomAlert(message) {
+  const alertBox = document.getElementById('customAlert');
+  alertBox.textContent = message;
+  alertBox.classList.remove('hide');
+  alertBox.classList.add('show');
+
+  setTimeout(() => {
+    alertBox.classList.remove('show');
+    alertBox.classList.add('hide');
+  }, 3000);
+}
+</script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const datebox = document.getElementById('dateboxdetail');
+    const invoiceContainer = document.getElementById('invoiceContainer');
+    const headerSection = document.getElementById('headerSection');
+    const staffDetailSection = document.getElementById('staffDetailSection');
+    const staffDetailHeader = document.getElementById('staffDetailHeader');
+
+    if (datebox) {
+      datebox.addEventListener('click', function () {
+        // Hide header and staff detail views
+        if (headerSection) headerSection.classList.add('hidden');
+        if (staffDetailSection) staffDetailSection.classList.add('hidden');
+        if (staffDetailHeader) staffDetailHeader.classList.add('hidden');
+
+        // Show invoice container
+        if (invoiceContainer) {
+          invoiceContainer.classList.remove('hidden');
+          invoiceContainer.classList.add('fade-in');
+        }
+      });
+    }
+  });
+</script>
+
+
+  <script>
+    // Set current date
+    const today = new Date();
+    const formattedDate = `${today.getDate().toString().padStart(2, '0')}/${(today.getMonth()+1).toString().padStart(2, '0')}/${today.getFullYear()}`;
+    document.getElementById('currentDate').textContent = formattedDate;
+    
+    
+// Function to show the invoice page
+function showInvoicePage() {
+    document.getElementById('appContent').classList.add('hidden');
+    document.getElementById('invoiceContainer').classList.remove('hidden');
+    document.getElementById('invoiceContainer').classList.add('fade-in');
+}
+
+// Event delegation for dateboxdetail clicks
+document.addEventListener('click', function(e) {
+    if (e.target.closest('#dateboxdetail')) {
+        showInvoicePage();
+    }
+});
+
+// Back button functionality for invoice
+document.addEventListener('click', function(e) {
+    if (e.target.closest('#invoiceBackButton')) {
+        document.getElementById('invoiceContainer').classList.add('hidden');
+        document.getElementById('appContent').classList.remove('hidden');
+    }
+});
+    
+    // Calculate amount for each row
+    function calculateAmount(element) {
+      const row = element.closest('tr');
+      if (!row) return;
+      
+      const qtyCell = row.children[1];
+      const rateCell = row.children[2];
+      const amountCell = row.children[3];
+      
+      // Parse numbers safely, default to 0 if invalid
+      const qty = parseFloat(qtyCell.textContent.trim()) || 0;
+      const rate = parseFloat(rateCell.textContent.trim()) || 0;
+      const amount = qty * rate;
+      
+      amountCell.textContent = amount > 0 ? amount : '';
+      
+      calculateTotal();
+    }
+    
+    // Calculate total amounts
+    function calculateTotal() {
+      let subtotal = 0;
+      document.querySelectorAll('.amount-cell').forEach(cell => {
+        const val = parseFloat(cell.textContent.trim());
+        if (!isNaN(val)) {
+          subtotal += val;
+        }
+      });
+      
+      const tax = subtotal * 0;
+      const total = subtotal + tax;
+      
+      document.getElementById('subtotalAmount').textContent = subtotal;
+      document.getElementById('taxAmount').textContent = tax.toFixed(0);
+      document.getElementById('totalAmount').textContent = total.toFixed(0);
+    }
+    
+    // Initialize amounts and total on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('tbody tr').forEach(row => {
+        const qtyCell = row.children[1];
+        const rateCell = row.children[2];
+        const amountCell = row.children[3];
+        const qty = parseFloat(qtyCell.textContent.trim()) || 0;
+        const rate = parseFloat(rateCell.textContent.trim()) || 0;
+        const amount = qty * rate;
+        amountCell.textContent = amount > 0 ? amount : '';
+      });
+      calculateTotal();
+    });
+    
+    // Share as image function
+    async function shareReceiptImage() {
+      const receipt = document.getElementById('receipt');
+      try {
+        const canvas = await html2canvas(receipt, {backgroundColor: null, scale: 2});
+        canvas.toBlob(async (blob) => {
+          if (navigator.canShare && navigator.canShare({ files: [new File([blob], 'receipt.png', { type: blob.type })] })) {
+            try {
+              await navigator.share({
+                files: [new File([blob], 'receipt.png', { type: blob.type })],
+                title: 'Invoice Receipt',
+                text: 'Please find the attached invoice.'
+              });
+            } catch (err) {
+              showCustomAlert('Error sharing: ' + err.message);
+            }
+          } else {
+            // Fallback: download the image
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'invoice-receipt.png';
+            a.click();
+            URL.revokeObjectURL(url);
+            showCustomAlert('Invoice downloaded successfully!');
+          }
+        }, 'image/png');
+      } catch (error) {
+        showCustomAlert('Failed to generate invoice image.');
+      }
+    }
+    
+    // Add focus styles to editable elements
+    document.querySelectorAll('[contenteditable="true"]').forEach(el => {
+      el.addEventListener('focus', function() {
+        this.classList.add('ring-2', 'ring-blue-300');
+      });
+      
+      el.addEventListener('blur', function() {
+        this.classList.remove('ring-2', 'ring-blue-300');
+      });
+    });
+  </script>
+
+
+<script>
+   // ===================== LOGIN FUNCTIONALITY =====================
+    const welcomeScreen = document.getElementById("welcome-screen");
+    const createAccountForm = document.getElementById("create-account-form");
+    const loginForm = document.getElementById("login-form");
+    const accountOpened = document.getElementById("account-opened");
+
+    const createAccountBtn = document.getElementById("create-account-btn");
+    const loginBtn = document.getElementById("login-btn");
+
+    const backFromCreate = document.getElementById("back-to-welcome-from-create");
+    const backFromLogin = document.getElementById("back-to-welcome-from-login");
+
+    // Load users from localStorage or initialize empty array
+    let users = JSON.parse(localStorage.getItem("mofinowUsers")) || [];
+
+    createAccountBtn.addEventListener("click", () => {
+      welcomeScreen.classList.add("hidden");
+      createAccountForm.classList.remove("hidden");
+      loginForm.classList.add("hidden");
+      accountOpened.classList.add("hidden");
+    });
+
+    loginBtn.addEventListener("click", () => {
+      welcomeScreen.classList.add("hidden");
+      loginForm.classList.remove("hidden");
+      createAccountForm.classList.add("hidden");
+      accountOpened.classList.add("hidden");
+    });
+
+    backFromCreate.addEventListener("click", () => {
+      createAccountForm.classList.add("hidden");
+      welcomeScreen.classList.remove("hidden");
+      accountOpened.classList.add("hidden");
+    });
+
+    backFromLogin.addEventListener("click", () => {
+      loginForm.classList.add("hidden");
+      welcomeScreen.classList.remove("hidden");
+      accountOpened.classList.add("hidden");
+    });
+
+    createAccountForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const fullname = createAccountForm.fullname.value.trim();
+      const email = createAccountForm.email.value.trim().toLowerCase();
+      const password = createAccountForm.password.value;
+
+      if (!fullname || !email || !password) {
+     showCustomAlert("Please fill all fields.");
+        return;
+      }
+
+      // Check if email already exists
+      if (users.some((user) => user.email === email)) {
+    showCustomAlert("An account with this email already exists.");
+        return;
+      }
+
+ // Save new user
+      users.push({email, password });
+      localStorage.setItem("mofinowUsers", JSON.stringify(users));
+
+showCustomAlert("login successfully!");
+
+
+
+      // Save new user
+      users.push({ fullname, email, password });
+      localStorage.setItem("mofinowUsers", JSON.stringify(users));
+
+showCustomAlert("Account created successfully!");
+
+      createAccountForm.reset();
+      createAccountForm.classList.add("hidden");
+      welcomeScreen.classList.remove("hidden");
+    });
+
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = loginForm.email.value.trim().toLowerCase();
+      const password = loginForm.password.value;
+
+      if (!email || !password) {
+        showCustomAlert("Please fill all fields.");
+        return;
+      }
+
+      // Find user
+      const user = users.find((u) => u.email === email && u.password === password);
+
+      if (user) {
+        // Store the username in sessionStorage
+        sessionStorage.setItem('loggedInUser', user.fullname);
+        
+        // Hide login screen and show app
+        document.getElementById('loginScreen').style.display = 'none';
+        document.getElementById('appContent').style.display = 'flex';
+        document.getElementById('appContent').classList.add('fade-in');
+        
+        // Set the user name in the app
+        if (user.fullname) {
+          userData.name = user.fullname;
+          updateHeaderDisplay();
+        }
+        
+        // Initialize the app
+        showStaffManagement();
+      } else {
+        showCustomAlert("Invalid email or password.");
+      }
+    });
+
+    // ===================== APP FUNCTIONALITY =====================
+    // Profile Edit Modal Logic
+    const profileEditModal = document.getElementById("profileEditModal");
+    const profilePicCircle = document.getElementById("profilePicCircle");
+    const displayName = document.getElementById("displayName");
+    const displayPhone = document.getElementById("displayPhone");
+    const profilePicPreview = document.getElementById("profilePicPreview");
+    const profilePicInput = document.getElementById("profilePicInput");
+    const editNameInput = document.getElementById("editName");
+    const editPhoneInput = document.getElementById("editPhone");
+    const editPasswordInput = document.getElementById("editPassword");
+    const editPasswordBtn = document.getElementById("editPasswordBtn");
+    const profileCancelBtn = document.getElementById("profileCancelBtn");
+    const profileEditForm = document.getElementById("profileEditForm");
+
+    // Add User Modal Logic
+    const addUserBtn = document.getElementById("addUserBtn");
+    const addUserModal = document.getElementById("addUserModal");
+    const addUserModalTitle = document.getElementById("addUserModalTitle");
+    const cancelAddUserBtn = document.getElementById("cancelAddUserBtn");
+    const addUserForm = document.getElementById("addUserForm");
+    const staffList = document.getElementById("staffList");
+    const noStaffText = document.getElementById("noStaffText");
+    const noStaffImage = document.getElementById("noStaffImage");
+    const membersTitle = document.getElementById("membersTitle");
+
+    // Staff Profile Picture Elements in Add/Edit User Modal
+    const staffProfilePicPreview = document.getElementById("staffProfilePicPreview");
+    const staffProfilePicInput = document.getElementById("staffProfilePicInput");
+    const staffProfilePicInitials = document.getElementById("staffProfilePicInitials");
+
+    // Staff Detail Section elements (New)
+    const staffDetailSection = document.getElementById('staffDetailSection');
+    const detailStaffProfilePic = document.getElementById('detailStaffProfilePic');
+    const detailStaffName = document.getElementById('detailStaffName');
+    const detailStaffPhone = document.getElementById('detailStaffPhone');
+    const editStaffFromDetailBtn = document.getElementById('editStaffFromDetailBtn');
+
+    // Headers
+    const headerSection = document.getElementById('headerSection'); // Main header
+    const staffDetailHeader = document.getElementById('staffDetailHeader'); // Staff detail specific header
+    const staffDetailHeaderName = document.getElementById('staffDetailHeaderName');
+    const addNewEntryBtnHeader = document.getElementById('addNewEntryBtnHeader'); // New button in staff detail header
+    const backToStaffListBtnHeader = document.getElementById('backToStaffListBtnHeader'); // Back button in staff detail header
+
+    const staffProfileContent = document.getElementById('staffProfileContent'); // New container
+    const dailyLogContent = document.getElementById('dailyLogContent'); // New container
+
+    // Date Edit/Delete Modal elements (New)
+    const dateEditDeleteModal = document.getElementById('dateEditDeleteModal');
+    const editDateInput = document.getElementById('editDateInput');
+    const deleteDateEntryBtn = document.getElementById('deleteDateEntryBtn');
+    const cancelDateEditBtn = document.getElementById('cancelDateEditBtn');
+    const saveDateEditBtn = document.getElementById('saveDateEditBtn');
+    const dateEditForm = document.getElementById('dateEditForm');
+    const deleteWarning = document.getElementById('deleteWarning');
+    const confirmDeleteCheckbox = document.getElementById('confirmDeleteCheckbox');
+
+    // Store current user data
+    let userData = {
+      name: sessionStorage.getItem('loggedInUser') || "Madan singh",
+      phone: "+91 9876543210",
+      password: "*****",
+      profilePic: null, // will hold data URL
+    };
+
+    // Store staff members data
+    let staffMembers = []; // Array of objects like: { name: "...", phone: "...", profilePic: "data:...", element: li_element, dailyEntries: [] }
+
+    // Editing state for profile and staff list
+    let editingStaffIndex = -1; // -1 for new user, index for existing user
+    let currentStaffDetailIndex = -1; // To keep track of which staff member's detail/log is open
+    let editingDateEntryIndex = -1; // To track which date entry is being edited
+
+    // Utility function to get initials
+    function getInitials(name) {
+      if (!name) return "";
+      const parts = name.trim().split(" ");
+      if (parts.length === 1) return parts[0].charAt(0).toUpperCase();
+      return (
+        parts[0].charAt(0).toUpperCase() + parts[1].charAt(0).toUpperCase()
+      );
+    }
+
+    // Function to manage header visibility
+    function updateHeaderVisibility(section) {
+        if (section === 'staffDetail') {
+            headerSection.classList.add('hidden');
+            staffDetailHeader.classList.remove('hidden');
+        } else {
+            headerSection.classList.remove('hidden');
+            staffDetailHeader.classList.add('hidden');
+        }
+    }
+ 
+    // Main User Profile Functions
+    function openProfileEditModal() {
+      editNameInput.value = userData.name;
+      editPhoneInput.value = userData.phone;
+      editPasswordInput.value = userData.password;
+      editPasswordInput.readOnly = true;
+      editPasswordInput.type = "password";
+      editPasswordBtn.title = "Edit password";
+
+      if (userData.profilePic) {
+        profilePicPreview.style.backgroundImage = `url(${userData.profilePic})`;
+        profilePicPreview.textContent = "";
+      } else {
+        profilePicPreview.style.backgroundImage = "none";
+        profilePicPreview.textContent = getInitials(userData.name);
+      }
+
+      profileEditModal.classList.remove("hidden");
+    }
+
+    function closeProfileEditModal() {
+      profileEditModal.classList.add("hidden");
+      editPasswordInput.readOnly = true;
+      editPasswordInput.type = "password";
+      editPasswordBtn.title = "Edit password";
+      editPasswordInput.value = userData.password;
+    }
+
+    function updateHeaderDisplay() {
+      displayName.textContent = userData.name;
+      const svgNS = "http://www.w3.org/2000/svg";
+      const svg = document.createElementNS(svgNS, "svg");
+      svg.setAttribute("class", "ml-1 w-5 h-5 text-black");
+      svg.setAttribute("fill", "none");
+      svg.setAttribute("stroke", "currentColor");
+      svg.setAttribute("stroke-width", "2");
+      svg.setAttribute("viewBox", "0 0 24 24");
+      svg.setAttribute("xmlns", svgNS);
+      const path = document.createElementNS(svgNS, "path");
+      path.setAttribute("d", "M19 9l-7 7-7-7");
+      path.setAttribute("stroke-linecap", "round");
+      path.setAttribute("stroke-linejoin", "round");
+      svg.appendChild(path);
+      displayName.appendChild(svg);
+
+      displayPhone.textContent = userData.phone;
+
+      if (userData.profilePic) {
+        profilePicCircle.style.backgroundImage = `url(${userData.profilePic})`;
+        profilePicCircle.textContent = "";
+        profilePicCircle.style.backgroundSize = "cover";
+        profilePicCircle.style.backgroundPosition = "center";
+      } else {
+        profilePicCircle.style.backgroundImage = "none";
+        profilePicCircle.textContent = getInitials(userData.name);
+        profilePicCircle.style.backgroundSize = "";
+        profilePicCircle.style.backgroundPosition = "";
+      }
+    }
+
+    profilePicInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        userData.profilePic = ev.target.result;
+        profilePicPreview.style.backgroundImage = `url(${userData.profilePic})`;
+        profilePicPreview.textContent = "";
+      };
+      reader.readAsDataURL(file);
+    });
+
+    editPasswordBtn.addEventListener("click", () => {
+      if (editPasswordInput.readOnly) {
+        editPasswordInput.readOnly = false;
+        editPasswordInput.type = "text";
+        editPasswordInput.value = "";
+        editPasswordInput.focus();
+        editPasswordBtn.title = "Save password";
+      } else {
+        if (editPasswordInput.value.trim() === "") {
+          showCustomAlert("Password cannot be empty.");
+          editPasswordInput.focus();
+          return;
+        }
+        userData.password = editPasswordInput.value;
+        editPasswordInput.readOnly = true;
+        editPasswordInput.type = "password";
+        editPasswordInput.value = userData.password;
+        editPasswordBtn.title = "Edit password";
+      }
+    });
+
+    profilePicCircle.addEventListener("click", openProfileEditModal);
+    displayName.addEventListener("click", openProfileEditModal);
+    profileCancelBtn.addEventListener("click", closeProfileEditModal);
+
+    profileEditForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const newName = editNameInput.value.trim();
+      if (!newName) {
+        showCustomAlert("Name cannot be empty.");
+        editNameInput.focus();
+        return;
+      }
+      userData.name = newName;
+      updateHeaderDisplay();
+      closeProfileEditModal();
+    });
+
+    // Add/Edit User Modal Functions
+    function openAddUserModal() {
+      if (editingStaffIndex === -1) { // Adding new user
+        addUserModalTitle.textContent = "Add User";
+        addUserForm.reset();
+        staffProfilePicPreview.style.backgroundImage = "none";
+        staffProfilePicInitials.textContent = "";
+      } else { // Editing existing user
+        addUserModalTitle.textContent = "Edit User";
+        const staff = staffMembers[editingStaffIndex];
+        addUserForm.userName.value = staff.name;
+        addUserForm.userPhone.value = staff.phone;
+
+        if (staff.profilePic) {
+          staffProfilePicPreview.style.backgroundImage = `url(${staff.profilePic})`;
+          staffProfilePicInitials.textContent = "";
+        } else {
+          staffProfilePicPreview.style.backgroundImage = "none";
+          staffProfilePicInitials.textContent = getInitials(staff.name);
+        }
+      }
+      addUserModal.classList.remove("hidden");
+    }
+
+    function closeAddUserModal() {
+      addUserModal.classList.add("hidden");
+      editingStaffIndex = -1; // Reset editing state
+    }
+
+    addUserBtn.addEventListener("click", () => {
+      editingStaffIndex = -1; // Set to -1 for adding new user
+      openAddUserModal();
+    });
+
+    cancelAddUserBtn.addEventListener("click", closeAddUserModal);
+
+    staffProfilePicInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        // Update the preview in the modal
+        staffProfilePicPreview.style.backgroundImage = `url(${ev.target.result})`;
+        staffProfilePicInitials.textContent = "";
+
+        // If editing, immediately update the staff member's profilePic in data
+        if (editingStaffIndex !== -1) {
+          staffMembers[editingStaffIndex].profilePic = ev.target.result;
+          updateStaffListItem(editingStaffIndex);
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+
+    function createListItem(name, phone, profilePic) {
+      const li = document.createElement("li");
+      li.className =
+        "border border-gray-300 rounded-md p-3 bg-gray-50 flex justify-between items-center";
+
+      const contentDiv = document.createElement("div");
+      contentDiv.className = "flex items-center flex-1 cursor-pointer"; // Added cursor-pointer
+      contentDiv.setAttribute('data-action', 'view'); // Custom attribute to differentiate click action
+
+      const profileCircle = document.createElement("div");
+      profileCircle.className = "staff-profile-circle";
+      if (profilePic) {
+        const img = document.createElement("img");
+        img.src = profilePic;
+        img.alt = ``;
+        profileCircle.appendChild(img);
+      } else {
+        profileCircle.textContent = getInitials(name);
+      }
+      contentDiv.appendChild(profileCircle);
+
+
+      const textSpan = document.createElement("span");
+      textSpan.textContent = phone ? `${name} - ${phone}` : name;
+      textSpan.className = "flex-1 min-w-0 break-words"; // Added for better text wrapping
+
+      contentDiv.appendChild(textSpan);
+
+      const editBtn = document.createElement("button");
+      editBtn.className =
+        "ml-4 px-3 py-1 bg-blue-600 text-white rounded-md text-sm font-semibold hover:bg-blue-700 flex-shrink-0";
+      editBtn.textContent = "Edit";
+      editBtn.type = "button";
+      editBtn.setAttribute('data-action', 'edit'); // Custom attribute to differentiate click action
+
+      li.appendChild(contentDiv);
+      li.appendChild(editBtn);
+
+      return li;
+    }
+
+    // Function to update a staff list item's display
+    function updateStaffListItem(index) {
+      const staff = staffMembers[index];
+      const li = staff.element; // Get the corresponding DOM element
+
+      const profileCircle = li.querySelector(".staff-profile-circle");
+      const textSpan = li.querySelector("span.flex-1");
+
+      textSpan.textContent = staff.phone ? `${staff.name} - ${staff.phone}` : staff.name;
+
+      // Update profile picture
+      profileCircle.innerHTML = ''; // Clear previous content
+      if (staff.profilePic) {
+        const img = document.createElement("img");
+        img.src = staff.profilePic;
+        img.alt = `${staff.name} profile picture`;
+        profileCircle.appendChild(img);
+      } else {
+        profileCircle.textContent = getInitials(staff.name);
+      }
+    }
+
+
+    // Delegate click listener for edit buttons to the staffList parent
+    staffList.addEventListener('click', (e) => {
+      const listItem = e.target.closest('li');
+      if (!listItem) return;
+
+      const index = Array.from(staffList.children).indexOf(listItem);
+      if (index === -1) return;
+
+      if (e.target.dataset.action === 'edit') {
+        editingStaffIndex = index;
+        openAddUserModal();
+      } else if (e.target.dataset.action === 'view' || e.target.closest('[data-action="view"]')) {
+        showStaffDetail(index);
+      }
+    });
+
+
+    addUserForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = e.target.userName.value.trim();
+      const phone = e.target.userPhone.value.trim();
+      // Get the profile pic from the preview (could be existing or newly selected)
+      let newProfilePic = null;
+      const previewImg = staffProfilePicPreview.querySelector('img');
+      if (previewImg) {
+          newProfilePic = previewImg.src;
+      } else if (staffProfilePicPreview.style.backgroundImage) {
+          newProfilePic = staffProfilePicPreview.style.backgroundImage.replace(/url\("?(.+?)"?\)/, '$1');
+      }
+
+
+      if (!name) return;
+
+      if (editingStaffIndex !== -1) {
+        // Update existing staff member
+        staffMembers[editingStaffIndex].name = name;
+        staffMembers[editingStaffIndex].phone = phone;
+        staffMembers[editingStaffIndex].profilePic = newProfilePic;
+        updateStaffListItem(editingStaffIndex);
+      } else {
+        // Add new staff member
+        const newStaff = { name, phone, profilePic: newProfilePic, dailyEntries: [] }; // Added dailyEntries for log
+        const li = createListItem(name, phone, newProfilePic);
+        newStaff.element = li; // Store reference to the DOM element
+        staffMembers.push(newStaff);
+        staffList.appendChild(li);
+      }
+
+      // After adding/editing, always hide "No Staff Added" if there are members
+      if (staffMembers.length > 0) {
+        noStaffText.style.display = "none";
+        noStaffImage.style.display = "none";
+        membersTitle.classList.remove("hidden");
+      } else {
+        noStaffText.style.display = "block";
+        noStaffImage.style.display = "block";
+        membersTitle.classList.add("hidden");
+      }
+
+      closeAddUserModal();
+    });
+
+    // --- Staff Detail Section Functions (New) ---
+    function showStaffDetail(index) {
+        const staff = staffMembers[index];
+        if (!staff) return;
+
+        currentStaffDetailIndex = index; // Set the current staff index
+
+        // Update header name
+        staffDetailHeaderName.textContent = staff.name;
+
+        // Show staff profile content, hide daily log content initially
+        staffProfileContent.classList.remove('hidden');
+        dailyLogContent.classList.add('hidden');
+        dailyLogContent.innerHTML = ''; // Clear previous daily entries
+
+        detailStaffName.textContent = staff.name;
+        detailStaffPhone.textContent = staff.phone || "No phone number";
+
+        detailStaffProfilePic.innerHTML = ''; // Clear previous content
+        if (staff.profilePic) {
+            const img = document.createElement("img");
+            img.src = staff.profilePic;
+            img.alt = `${staff.name} profile picture`;
+            detailStaffProfilePic.appendChild(img);
+            detailStaffProfilePic.style.background = 'none';
+        } else {
+            detailStaffProfilePic.textContent = getInitials(staff.name);
+            detailStaffProfilePic.style.backgroundImage = "none";
+            detailStaffProfilePic.style.backgroundColor = '#e0f2f7'; // Or any default color
+            detailStaffProfilePic.style.color = '#00796b';
+        }
+
+        // Hide other sections and show staff detail section
+        staffManagementSection.classList.add('hidden');
+        settingsSection.classList.add('hidden');
+        staffDetailSection.classList.remove('hidden');
+
+        // Update header visibility
+        updateHeaderVisibility('staffDetail');
+
+        // Store the index of the staff member being viewed for the edit button
+        editStaffFromDetailBtn.dataset.staffIndex = index;
+
+        // Populate with existing daily entries for this staff member
+        if (staff.dailyEntries && staff.dailyEntries.length > 0) {
+            showDailyLogView(); // Call this to populate with existing entries
+        }
+    }
+
+    // Function to show the daily log view for the current staff member
+    function showDailyLogView() {
+        if (currentStaffDetailIndex === -1) return; // No staff selected
+
+        staffProfileContent.classList.add('hidden'); // Hide staff profile details
+        dailyLogContent.classList.remove('hidden'); // Show daily log content
+        dailyLogContent.innerHTML = ''; // Clear existing entries to re-render
+
+        // Add "This week" header with share button
+        const thisWeekHeader = document.createElement('div');
+        thisWeekHeader.className = 'w-full max-w-md flex items-center justify-between text-black font-semibold text-base mb-2 this-week-header';
+        thisWeekHeader.innerHTML = `
+            <span>This week</span>
+            <svg class="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM11 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+            </svg>
+        `;
+        dailyLogContent.appendChild(thisWeekHeader);
+
+        // Populate with existing daily entries for this staff member
+        const currentStaff = staffMembers[currentStaffDetailIndex];
+        currentStaff.dailyEntries.forEach((entry, index) => {
+            const dateEntryDiv = createDateEntryElement(entry.date, index);
+            dailyLogContent.appendChild(dateEntryDiv);
+        });
+    }
+
+    // Function to create a date entry element
+    function createDateEntryElement(dateString, index) {
+        const dateEntryDiv = document.createElement('div');
+        dateEntryDiv.className = 'border border-gray-300 rounded-md p-3 bg-gray-50 flex justify-between items-center shadow-smm';
+        dateEntryDiv.id = 'dateboxdetail';
+        dateEntryDiv.dataset.entryIndex = index; // Store the index for easy lookup
+
+        dateEntryDiv.innerHTML = `
+            <span class="text-black font-semibold date-display">Date: ${dateString}</span>
+            <input type="date" value="${dateString.split('/').reverse().join('-')}" class="hidden date-edit-input w-28 px-2 py-1 border rounded-md" />
+            <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-gray-700 cursor-pointer edit-date-btn" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536M9 11l6 6L7 21l-4-4 6-6z"></path>
+                </svg>
+                <svg class="w-5 h-5 text-gray-700 cursor-pointer share-date-btn" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM11 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+                </svg>
+            </div>
+        `;
+        return dateEntryDiv;
+    }
+
+    // Event listener for "new" button in staff detail header
+    addNewEntryBtnHeader.addEventListener('click', () => {
+        if (currentStaffDetailIndex === -1) return;
+
+        // Ensure daily log view is active and clear previous content
+        staffProfileContent.classList.add('hidden');
+        dailyLogContent.classList.remove('hidden');
+
+        // Add "This week" header if it's not already there (or re-add if cleared)
+        let thisWeekHeaderCheck = dailyLogContent.querySelector('.this-week-header');
+        if (!thisWeekHeaderCheck) {
+            thisWeekHeaderCheck = document.createElement('div');
+            thisWeekHeaderCheck.className = 'w-full max-w-md flex items-center justify-between text-black font-semibold text-base mb-2 this-week-header';
+            thisWeekHeaderCheck.innerHTML = `
+                <span>This week</span>
+                <svg class="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM11 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+                </svg>
+            `;
+            dailyLogContent.prepend(thisWeekHeaderCheck); // Prepend to keep it at the top
+        }
+
+
+        // Get current date in DD/MM/YYYY format
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
+        const year = today.getFullYear();
+        const dateString = `${day}/${month}/${year}`;
+
+        const currentStaff = staffMembers[currentStaffDetailIndex];
+        const newEntryIndex = currentStaff.dailyEntries.length; // Get the new index
+
+        // Create and append the new date entry
+        const dateEntryDiv = createDateEntryElement(dateString, newEntryIndex);
+        dailyLogContent.appendChild(dateEntryDiv);
+
+        // Store the new entry in the staff member's data
+        currentStaff.dailyEntries.push({ date: dateString });
+    });
+
+
+    editStaffFromDetailBtn.addEventListener('click', (e) => {
+        const index = parseInt(e.target.dataset.staffIndex, 10);
+        if (!isNaN(index) && staffMembers[index]) {
+            editingStaffIndex = index;
+            openAddUserModal();
+        }
+    });
+
+    // Event listener for the back arrow in staff detail header
+    backToStaffListBtnHeader.addEventListener('click', showStaffManagement);
+
+    // --- Date Edit/Delete Modal Logic ---
+    function openDateEditModal(date, index) {
+        editingDateEntryIndex = index;
+        // Convert DD/MM/YYYY to YYYY-MM-DD for date input
+        const [day, month, year] = date.split('/');
+        editDateInput.value = `${year}-${month}-${day}`;
+
+        deleteWarning.classList.add('hidden'); // Hide warning initially
+        confirmDeleteCheckbox.checked = false; // Uncheck checkbox
+
+        dateEditDeleteModal.classList.remove('hidden');
+    }
+
+    function closeDateEditModal() {
+        dateEditDeleteModal.classList.add('hidden');
+        editingDateEntryIndex = -1; // Reset
+    }
+
+    // Delegate click listener for edit and share icons on daily log entries
+    dailyLogContent.addEventListener('click', (e) => {
+        const editBtn = e.target.closest('.edit-date-btn');
+        const shareBtn = e.target.closest('.share-date-btn');
+        const dateEntryDiv = e.target.closest('[data-entry-index]');
+
+        if (!dateEntryDiv) return;
+
+        const index = parseInt(dateEntryDiv.dataset.entryIndex, 10);
+        const currentStaff = staffMembers[currentStaffDetailIndex];
+        const entry = currentStaff.dailyEntries[index];
+
+        if (editBtn) {
+            openDateEditModal(entry.date, index);
+        } else if (shareBtn) {
+            // Implement share functionality (e.g., using Web Share API)
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Daily Log Entry',
+                    text: `Staff: ${currentStaff.name}\nDate: ${entry.date}`,
+                    url: window.location.href // Or a specific URL if applicable
+                }).then(() => {
+                    console.log('Shared successfully');
+                }).catch((error) => {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                showCustomAlert(`Share this daily log entry for ${currentStaff.name} on ${entry.date}`);
+                // Fallback for browsers that don't support Web Share API
+                // You could copy to clipboard here or provide other sharing options.
+            }
+        }
+    });
+
+    deleteDateEntryBtn.addEventListener('click', () => {
+        deleteWarning.classList.remove('hidden');
+    });
+
+    cancelDateEditBtn.addEventListener('click', closeDateEditModal);
+
+    dateEditForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const currentStaff = staffMembers[currentStaffDetailIndex];
+
+        if (deleteWarning.classList.contains('hidden')) {
+            // Save/Edit mode
+            const newDate = editDateInput.value; // YYYY-MM-DD
+            const [year, month, day] = newDate.split('-');
+            const formattedDate = `${day}/${month}/${year}`; // DD/MM/YYYY
+
+            if (editingDateEntryIndex !== -1 && currentStaff.dailyEntries[editingDateEntryIndex]) {
+                currentStaff.dailyEntries[editingDateEntryIndex].date = formattedDate;
+                showDailyLogView(); // Re-render to update the display
+                closeDateEditModal();
+            } else {
+                showCustomAlert('No entry selected for editing.');
+            }
+        } else {
+            // Delete mode
+            if (confirmDeleteCheckbox.checked) {
+                if (editingDateEntryIndex !== -1 && currentStaff.dailyEntries[editingDateEntryIndex]) {
+                    currentStaff.dailyEntries.splice(editingDateEntryIndex, 1);
+                    showDailyLogView(); // Re-render to update the display
+                    closeDateEditModal();
+                } else {
+                    showCustomAlert('No entry selected for deletion.');
+                }
+            } else {
+                showCustomAlert('Please confirm deletion by checking the checkbox.');
+            }
+        }
+    });
+
+    // Initial state setup for navigation buttons
+    const staffManagementSection = document.getElementById('staffManagementSection');
+    const settingsSection = document.getElementById('settingsSection');
+    const settingsNavBtn = document.getElementById('settingsNavBtn');
+    const homeNavBtn = document.getElementById('homeNavBtn');
+
+    // Settings Dropdowns (rest of the settings code, unchanged from previous version)
+    const themeButton = document.getElementById('theme-button');
+    const themeOptions = document.getElementById('theme-options');
+    const themeChevron = document.getElementById('theme-chevron');
+    const selectedThemeText = document.getElementById('selectedThemeText');
+
+    const languageButton = document.getElementById('language-button');
+    const languageOptions = document.getElementById('language-options');
+    const languageChevron = document.getElementById('language-chevron');
+    const selectedLanguageText = document.getElementById('selectedLanguageText');
+
+
+    const fontsizeButton = document.getElementById('fontsize-button');
+    const fontsizeOptions = document.getElementById('fontsize-options');
+    const fontsizeChevron = document.getElementById('fontsize-chevron');
+
+
+    // Function to show staff management and hide settings
+    function showStaffManagement() {
+      staffManagementSection.classList.remove('hidden');
+      settingsSection.classList.add('hidden');
+      staffDetailSection.classList.add('hidden'); // Hide staff detail
+      updateHeaderVisibility('main'); // Show main header
+
+      // Update nav button active states
+      homeNavBtn.classList.remove('text-gray-700');
+      homeNavBtn.classList.add('text-blue-600');
+      settingsNavBtn.classList.remove('text-blue-600');
+      settingsNavBtn.classList.add('text-gray-700');
+    }
+
+    // Function to show settings and hide staff management
+    function showSettings() {
+      staffManagementSection.classList.add('hidden');
+      staffDetailSection.classList.add('hidden'); // Hide staff detail
+      settingsSection.classList.remove('hidden');
+      updateHeaderVisibility('main'); // Show main header (settings uses main header structure)
+
+      // Update nav button active states
+      settingsNavBtn.classList.remove('text-gray-700');
+      settingsNavBtn.classList.add('text-blue-600');
+      homeNavBtn.classList.remove('text-blue-600');
+      homeNavBtn.classList.add('text-gray-700');
+    }
+
+    // Event listener for Settings navigation button
+    settingsNavBtn.addEventListener('click', showSettings);
+
+    // Event listener for Home navigation button
+    homeNavBtn.addEventListener('click', showStaffManagement);
+
+    // Event listeners for settings dropdowns
+    themeButton.addEventListener('click', () => {
+      const expanded = themeButton.getAttribute('aria-expanded') === 'true';
+      themeButton.setAttribute('aria-expanded', !expanded);
+      themeOptions.classList.toggle('hidden');
+      themeChevron.classList.toggle('fa-chevron-down');
+      themeChevron.classList.toggle('fa-chevron-up');
+      // Close other dropdowns
+      languageOptions.classList.add('hidden');
+      languageButton.setAttribute('aria-expanded', 'false');
+      languageChevron.classList.add('fa-chevron-down');
+      languageChevron.classList.remove('fa-chevron-up');
+      fontsizeOptions.classList.add('hidden');
+      fontsizeButton.setAttribute('aria-expanded', 'false');
+      fontsizeChevron.classList.add('fa-chevron-down');
+      fontsizeChevron.classList.remove('fa-chevron-up');
+    });
+
+    languageButton.addEventListener('click', () => {
+      const expanded = languageButton.getAttribute('aria-expanded') === 'true';
+      languageButton.setAttribute('aria-expanded', !expanded);
+      languageOptions.classList.toggle('hidden');
+      languageChevron.classList.toggle('fa-chevron-down');
+      languageChevron.classList.toggle('fa-chevron-up');
+      // Close other dropdowns
+      themeOptions.classList.add('hidden');
+      themeButton.setAttribute('aria-expanded', 'false');
+      themeChevron.classList.add('fa-chevron-down');
+      themeChevron.classList.remove('fa-chevron-up');
+      fontsizeOptions.classList.add('hidden');
+      fontsizeButton.setAttribute('aria-expanded', 'false');
+      fontsizeChevron.classList.add('fa-chevron-down');
+      fontsizeChevron.classList.remove('fa-chevron-up');
+    });
+
+    fontsizeButton.addEventListener('click', () => {
+      const expanded = fontsizeButton.getAttribute('aria-expanded') === 'true';
+      fontsizeButton.setAttribute('aria-expanded', !expanded);
+      fontsizeOptions.classList.toggle('hidden');
+      fontsizeChevron.classList.toggle('fa-chevron-down');
+      fontsizeChevron.classList.toggle('fa-chevron-up');
+      // Close other dropdowns
+      themeOptions.classList.add('hidden');
+      themeButton.setAttribute('aria-expanded', 'false');
+      themeChevron.classList.add('fa-chevron-down');
+      themeChevron.classList.remove('fa-chevron-up');
+      languageOptions.classList.add('hidden');
+      languageButton.setAttribute('aria-expanded', 'false');
+      languageChevron.classList.add('fa-chevron-down');
+      languageChevron.classList.remove('fa-chevron-up');
+    });
+
+    // Close dropdowns if clicked outside
+    document.addEventListener('click', (e) => {
+      if (!themeButton.contains(e.target) && !themeOptions.contains(e.target)) {
+        themeOptions.classList.add('hidden');
+        themeButton.setAttribute('aria-expanded', 'false');
+        themeChevron.classList.add('fa-chevron-down');
+        themeChevron.classList.remove('fa-chevron-up');
+      }
+      if (!languageButton.contains(e.target) && !languageOptions.contains(e.target)) {
+        languageOptions.classList.add('hidden');
+        languageButton.setAttribute('aria-expanded', 'false');
+        languageChevron.classList.add('fa-chevron-down');
+        languageChevron.classList.remove('fa-chevron-up');
+      }
+      if (!fontsizeButton.contains(e.target) && !fontsizeOptions.contains(e.target)) {
+        fontsizeOptions.classList.add('hidden');
+        fontsizeButton.setAttribute('aria-expanded', 'false');
+        fontsizeChevron.classList.add('fa-chevron-down');
+        fontsizeChevron.classList.remove('fa-chevron-up');
+      }
+    });
+
+    // --- REAL IMPLEMENTATION FOR SETTINGS ---
+
+    // Function to apply theme
+    function applyTheme(theme) {
+        const body = document.body;
+        // Remove existing theme classes
+        body.classList.remove('theme-light', 'theme-dark');
+
+        if (theme === 'dark') {
+            body.classList.add('theme-dark');
+            selectedThemeText.textContent = "Dark theme enabled";
+        } else if (theme === 'light') {
+            body.classList.add('theme-light');
+            selectedThemeText.textContent = "Light theme enabled";
+        } else { // System theme
+            // You'd typically check media queries for system preference here
+            // For simplicity, we'll default to light if system is chosen and no media query is set
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                body.classList.add('theme-dark');
+            } else {
+                body.classList.add('theme-light');
+            }
+            selectedThemeText.textContent = "System theme enabled";
+        }
+        localStorage.setItem('appTheme', theme); // Save preference
+    }
+
+    // Handle theme selection
+    themeOptions.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedTheme = btn.dataset.theme;
+        applyTheme(selectedTheme);
+        themeOptions.classList.add('hidden');
+        themeButton.setAttribute('aria-expanded', 'false');
+        themeChevron.classList.add('fa-chevron-down');
+        themeChevron.classList.remove('fa-chevron-up');
+        // ✅ Alert
+    showCustomAlert(`Theme changed to ${selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)}`);
+      });
+    });
+
+    // Load theme preference on page load
+    const savedTheme = localStorage.getItem('appTheme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        applyTheme('light'); // Default theme
+    }
+
+    // Language content mapping (example)
+    const translations = {
+        english: {
+            appTheme: "App theme",
+            selectTheme: "Select which app theme to display",
+            light: "Light",
+            dark: "Dark",
+            system: "System",
+            language: "Language",
+            selectLanguage: "Select which language use",
+            english: "English",
+            hindi: "Hindi",
+            fontSize: "Font size",
+            larger: "Larger",
+            medium: "Medium",
+            small: "Small",
+            about: "About",
+            aboutText: "This app is design and made by Ms11. BY using this app user manage their works and Money also make attendance of the employes For any improvement contact me using gmail :-",
+            home: "Home",
+            attendance: "Attendance",
+            geo: "Geo",
+            settings: "Settings",
+            noStaffAdded: "No Staff Added",
+            members: "Members",
+            addUser: "Add",
+            editProfile: "Edit Profile",
+            name: "Name",
+            phone: "Phone (non-editable)",
+            password: "Password",
+            cancel: "Cancel",
+            save: "Save",
+            edit: "Edit",
+            addStaffUser: "Add User", // For the modal title when adding staff
+            editStaffUser: "Edit User", // For the modal title when editing staff
+        },
+        hindi: {
+            Amount:"पैसा",
+            Rate:"किमत",
+
+            Description:"अबौर्ट",
+            mistri:"मिस्त्री",
+            Labour:"लेबर",
+            appTheme: "ऐप थीम",
+            selectTheme: "ऐप थीम चुनें",
+            light: "लाइट",
+            dark: "डार्क",
+            system: "सिस्टम",
+            language: "भाषा",
+            selectLanguage: "भाषा चुनें",
+            english: "अंग्रेज़ी",
+            hindi: "हिंदी",
+            fontSize: "फ़ॉन्ट आकार",
+            larger: "बड़ा",
+            medium: "मध्यम",
+            small: "छोटा",
+            about: "के बारे में",
+            aboutText: "यह ऐप Ms11 द्वारा डिज़ाइन और बनाया गया है। इस ऐप का उपयोग करके उपयोगकर्ता अपने काम और पैसे का प्रबंधन कर सकते हैं और कर्मचारियों की उपस्थिति भी बना सकते हैं। किसी भी सुधार के लिए Gmail का उपयोग करके मुझसे संपर्क करें :-",
+            home: "होम",
+            attendance: "उपस्थिति",
+            geo: "भू",
+            settings: "सेटिंग्स",
+            noStaffAdded: "कोई स्टाफ नहीं जोड़ा गया",
+            members: "सदस्य",
+            addUser: "जोड़ें",
+            editProfile: "प्रोफ़ाइल संपादित करें",
+            name: "नाम",
+            phone: "फ़ोन (अपरिवर्तनीय)",
+            password: "पासवर्ड",
+            cancel: "रद्द करें",
+            save: "सहेजें",
+            edit: "संपादित करें",
+            addStaffUser: "उपयोगकर्ता जोड़ें",
+            editStaffUser: "उपयोगकर्ता संपादित करें",
+        }
+    };
+
+    // Function to apply language
+    function applyLanguage(lang) {
+        const currentLangData = translations[lang];
+        if (!currentLangData) return;
+
+        // Update static texts
+        document.querySelector('#headerSection #addUserBtn span').textContent = currentLangData.addUser; // "Add" button
+        document.querySelector('#noStaffText').textContent = currentLangData.noStaffAdded;
+        document.querySelector('#membersTitle').textContent = currentLangData.members;
+        document.querySelector('#homeNavBtn span').textContent = currentLangData.home;
+        document.querySelector('nav button:nth-child(2) span').textContent = currentLangData.attendance;
+        document.querySelector('nav button:nth-child(3) span').textContent = currentLangData.geo;
+        document.querySelector('#settingsNavBtn span').textContent = currentLangData.settings;
+
+        document.querySelector('#profileEditModal h2').textContent = currentLangData.editProfile;
+        document.querySelector('#profileEditForm label[for="editName"]').textContent = currentLangData.name;
+        document.querySelector('#profileEditForm label[for="editPhone"]').textContent = currentLangData.phone;
+        document.querySelector('#profileEditForm label.block:nth-of-type(3)').textContent = currentLangData.password;
+        document.querySelector('#profileCancelBtn').textContent = currentLangData.cancel;
+        document.querySelector('#profileSaveBtn').textContent = currentLangData.save;
+
+        // For staff detail header
+        document.querySelector('#addNewEntryBtnHeader span').textContent = currentLangData.addStaffUser.split(' ')[0]; // 'new'
+        // 'Clint name' in staffDetailHeaderName is dynamic, so no translation needed here.
+
+        document.querySelector('#settingsSection h1').textContent = currentLangData.settings;
+        document.querySelector('section:nth-of-type(1) h2').textContent = currentLangData.appTheme;
+        document.querySelector('#theme-button div p:nth-of-type(1)').textContent = currentLangData.appTheme;
+        document.querySelector('#theme-button div p:nth-of-type(2)').textContent = currentLangData.selectTheme;
+        document.querySelector('[data-theme="light"]').textContent = currentLangData.light;
+        document.querySelector('[data-theme="dark"]').textContent = currentLangData.dark;
+        document.querySelector('[data-theme="system"]').textContent = currentLangData.system;
+
+        document.querySelector('section:nth-of-type(2) h2').textContent = currentLangData.language;
+        document.querySelector('#language-button div p:nth-of-type(1)').textContent = currentLangData.language;
+        document.querySelector('#language-button div p:nth-of-type(2)').textContent = currentLangData.selectLanguage;
+        document.querySelector('[data-language="english"]').textContent = currentLangData.english;
+        document.querySelector('[data-language="hindi"]').textContent = currentLangData.hindi;
+
+        document.querySelector('section:nth-of-type(3) h2').textContent = currentLangData.fontSize;
+        document.querySelector('#fontsize-button div p').textContent = currentLangData.fontSize;
+        document.querySelector('[data-fontsize="larger"]').textContent = currentLangData.larger;
+        document.querySelector('[data-fontsize="medium"]').textContent = currentLangData.medium;
+        document.querySelector('[data-fontsize="small"]').textContent = currentLangData.small;
+        document.querySelector('[data-fontsize="system"]').textContent = currentLangData.system;
+
+        document.querySelector('section:nth-of-type(4) h2').textContent = currentLangData.about;
+        document.querySelector('section:nth-of-type(4) p').textContent = currentLangData.aboutText;
+
+        // Update modal titles for Add/Edit User
+        if (addUserModalTitle.textContent === translations.english.addStaffUser || addUserModalTitle.textContent === translations.hindi.addStaffUser) {
+            addUserModalTitle.textContent = currentLangData.addStaffUser;
+        } else if (addUserModalTitle.textContent === translations.english.editStaffUser || addUserModalTitle.textContent === translations.hindi.editStaffUser) {
+            addUserModalTitle.textContent = currentLangData.editStaffUser;
+        }
+
+
+        document.querySelector('#addUserForm label[for="userName"]').innerHTML = `${currentLangData.name} <span class="text-red-600">*</span>`;
+        document.querySelector('#addUserForm label[for="userPhone"]').textContent = currentLangData.phone.replace(" (non-editable)", " (optional)"); // Adjust phone text for staff
+        document.querySelector('#cancelAddUserBtn').textContent = currentLangData.cancel;
+
+        selectedLanguageText.textContent = currentLangData.selectLanguage.split(' ')[0] + ': ' + (lang === 'english' ? currentLangData.english : currentLangData.hindi);
+        localStorage.setItem('appLanguage', lang); // Save preference
+    }
+
+    // Handle language selection
+    
+    languageOptions.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedLanguage = btn.dataset.language;
+        applyLanguage(selectedLanguage);
+           // ✅ Ensure dropdown closes AFTER applyLanguage
+    setTimeout(() => {
+        languageOptions.classList.add('hidden');
+        languageButton.setAttribute('aria-expanded', 'false');
+        languageChevron.classList.add('fa-chevron-down');
+        languageChevron.classList.remove('fa-chevron-up');
+          }, 50);
+          // ✅ Alert
+  showCustomAlert(`Language changed to ${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)}`);
+      });
+    });
+
+    // Load language preference on page load
+    const savedLanguage = localStorage.getItem('appLanguage');
+    if (savedLanguage) {
+        applyLanguage(savedLanguage);
+    } else {
+        applyLanguage('english'); // Default language
+    }
+
+    // Function to apply font size
+    function applyFontSize(size) {
+        const body = document.body;
+        // Remove existing font size classes
+        body.classList.remove('font-size-larger', 'font-size-medium', 'font-size-small');
+
+        if (size === 'larger') {
+            body.classList.add('font-size-larger');
+        } else if (size === 'medium') {
+            body.classList.add('font-size-medium');
+        } else if (size === 'small') {
+            body.classList.add('font-size-small');
+        } else { // System font size
+            // For simplicity, we'll revert to medium if system is chosen
+            body.classList.add('font-size-medium');
+        }
+        localStorage.setItem('appFontSize', size); // Save preference
+    }
+
+    // Handle font size selection
+    fontsizeOptions.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedFontSize = btn.dataset.fontsize;
+        applyFontSize(selectedFontSize);
+         // ✅ Delay to let layout settle, then close dropdown
+    setTimeout(() => {
+        fontsizeOptions.classList.add('hidden');
+        fontsizeButton.setAttribute('aria-expanded', 'false');
+        fontsizeChevron.classList.add('fa-chevron-down');
+        fontsizeChevron.classList.remove('fa-chevron-up');
+          }, 50);
+    // ✅ Alert
+    showCustomAlert(`Font size changed to ${selectedSize.charAt(0).toUpperCase() + selectedSize.slice(1)}`);
+      });
+    });
+
+    // Load font size preference on page load
+    const savedFontSize = localStorage.getItem('appFontSize');
+    if (savedFontSize) {
+        applyFontSize(savedFontSize);
+    } else {
+        applyFontSize('medium'); // Default font size
+    }
+
+
+    
+</script>
+  <div id="customAlert" class="fixed top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-white text-black shadow-lg rounded-md px-6 py-3 opacity-0 transition-all duration-500 z-50"></div>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("login-form");
+    const loginScreen = document.getElementById("loginScreen");
+    const appContent = document.getElementById("appContent");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    // Auto login if already logged in
+    if (localStorage.getItem("isLoggedIn") === "true") {
+      if (loginScreen) loginScreen.style.display = "none";
+      if (appContent) appContent.style.display = "flex";
+    } else {
+      if (loginScreen) loginScreen.style.display = "flex";
+      if (appContent) appContent.style.display = "none";
+    }
+
+    // Login submit
+    if (loginForm) {
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = loginForm.email.value;
+        const password = loginForm.password.value;
+
+        // Save login state
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userEmail", email);
+
+        if (loginScreen) loginScreen.style.display = "none";
+        if (appContent) appContent.style.display = "flex";
+        
+  // ✅ Show alert
+  showCustomAlert("Login Successful");
+      });
+    }
+
+    // Logout button
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function () {
+        localStorage.clear();
+        sessionStorage.clear();
+
+        if (appContent) appContent.style.display = "none";
+        if (loginScreen) loginScreen.style.display = "flex";
+          // ✅ Show alert
+    showCustomAlert("Logout Successful");
+      });
+    }
+  });
+</script>
+
+
+
+
+</body>
+</html>
